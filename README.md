@@ -546,9 +546,12 @@ ORDER BY
 ```
 
 ## Visualise my findings and provide insights and recommendations.
-For this part of the project, I use **Tableau** as a tool for visualising my findings. I create a dynamic dashboard includings 4 pages: overview, total revenue, number of tourists and total occupied hotel rooms. I include important findings next to the visulisation for each section to summarise any interesting trends or discovery. Please click [here](https://public.tableau.com/app/profile/kantima.sadangrit/viz/ThailandDomesticTravel/Dashboard1) to view the dashboard. 
+For this part of the project, I use **Tableau** as a tool for visualising my findings. I create a dynamic dashboard includings 4 pages: overview, total revenue, number of tourists and total occupied hotel rooms. I include important findings next to the visulisation for each section to summarise any interesting trends or discovery. 
 
-## Overall Findings and recommendations
+Please click [here](https://public.tableau.com/app/profile/kantima.sadangrit/viz/ThailandDomesticTravel/Dashboard1) to view the full dashboard. 
+<div class='tableauPlaceholder' id='viz1706599884220' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Th&#47;ThailandDomesticTravel&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ThailandDomesticTravel&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Th&#47;ThailandDomesticTravel&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>            
+
+## Overall Findings
 
 ### Total revenue vs number of tourists
 
@@ -623,3 +626,9 @@ Hotel rooms were the most occupied in January  and highly occupied during Septe
 **By region**
 
 The central region has the highest number of occupied hotel rooms, followed by the south, east, north and northeast. This is in line with the earlier finding regarding the ranking of the most visited regions and total revenue across all years.
+
+### Recommendations
+1. Continue to elevate the tourism supply and sustainable standards for popular provinces like Bangkok, Chonburi and Chiang Mai.
+2. Considering a campaign or advertisement of provinces that are popular among Thai tourists to be more appealing towards foreigners as they tend to spend more money when travel in Thailand. Usually, the provinces with high number of Thai tourists do not generate that much revenue so try to make sure that there are fun activities or interesting things to do there.
+3. Continue to ensure that Thailand has the capacity to handle high volumes of tourists during popular months (October to February).
+ 
