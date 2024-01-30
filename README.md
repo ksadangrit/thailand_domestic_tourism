@@ -8,7 +8,7 @@ _**Note:** Since the dataset only contains 2 months for the year 2023, the resul
 1. Import and prepare data
 2. Process and clean my data
 3. Calculate and analyse my data
-4. Visualise findings and provide insights and recommendations
+4. Finding and recommendations
 
 ## Import and prepare data
 First, I will download this [dataset](https://www.kaggle.com/datasets/thaweewatboy/thailand-domestic-tourism-statistics) from Kaggle and import it into MySQL to view the dataset. This dataset was sourced from raw data provided by the [Official Ministry of Tourism and Sports Statistics. ](http://www.mots.go.th/news/category/411). This dataset is from January 2019 to February 2023. 
@@ -545,11 +545,8 @@ ORDER BY
 	total_occupied_room DESC;
 ```
 
-## Visualise my findings and provide insights and recommendations.
+## Findings and recommendations
 For this part of the project, I use **Tableau** as a tool for visualising my findings. I create a dynamic dashboard includings 4 pages: overview, total revenue, number of tourists and total occupied hotel rooms. I include important findings next to the visulisation for each section to summarise any interesting trends or discovery. 
-
-Please click [here](https://public.tableau.com/app/profile/kantima.sadangrit/viz/ThailandDomesticTravel/Dashboard1) to view the full dashboard. 
-<div class='tableauPlaceholder' id='viz1706599884220' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Th&#47;ThailandDomesticTravel&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ThailandDomesticTravel&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Th&#47;ThailandDomesticTravel&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>            
 
 ## Overall Findings
 
@@ -560,6 +557,8 @@ Please click [here](https://public.tableau.com/app/profile/kantima.sadangrit/viz
 51% of the total revenue accumulated from all year is from foreign tourists while 49% is from Thai tourists. This may not seem like a big difference but when we look at the number of tourists, 84% of all tourists are Thai while 16% are foreigners. This shows that Thai tourists tend to spend much less than foreign tourists while they travel domestically in Thailand.
 
 ### Total revenue vs number of tourists vs occupied hotel rooms by year
+![Dashboard 5](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/1119627c-57ea-47be-bc55-002785293182)
+
 
 When comparing the years based on total revenue, total number of tourists and total number of hotel rooms occupied, we can see that 2019 comes in first for all categories, followed by 2022 and 2020. This is highly because 2019 was the year before covid outbreak and 2022 was when border restrictions and healthcare measurement were eased in Thailand. 
 
@@ -567,6 +566,8 @@ Although 2020 was the year that covid started spreading in Thailand, the country
 
 ### 1. Total revenue
 **By provinces**
+
+![Dashboard 6 (1)](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/65db2094-eb4a-4f73-9c92-af10caf9f652)
 
 Bangkok ranks first as the province with the highest total revenue across all years, followed by Phuket, Chonburi, Chiang Mai and Krabi. For Thai tourists, Chiang mai ranks second in terms of total revenue while for foreign tourists, Chiang mai does not make it into their top 5. 
 
@@ -576,6 +577,8 @@ It is worth noting that foreign tourists spend over 7 times more money in Phuket
 
 **By regions**
 
+![Dashboard 7](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/6155be3c-29d0-4d51-8909-05a9edf2e8e1)
+
 The central region ranks first based on the total revenue generated, followed by South, East, North and Northeast regions. Bangkok is likely to play a big part in the result as Bangkok is the number one province with the most total revenue from all tourist types and it is located in the central part of Thailand. 
 
 The southern region and the eastern region rank second and third respectively for the total revenue as foreign tourists tend to spend more money on their trip and provinces with beaches in the southern and eastern regions are popular among foreign tourists. 
@@ -584,13 +587,17 @@ In contrast, the northern region rank which is in line with how Chiang Mai is al
 
 **By months**
 
+![Dashboard 8 (1)](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/3c70a8af-aac3-4284-9d5f-0b7e199428e1)
+
 Thailand accumulated its tourism revenue the most in January, February, December, November and October respectively. This is highly because the end of the year and the beginning of the year are during international holiday seasons, therefore, people travel and spend money more during these times.  
 
-June and May are at the bottom of the list. This is likely due to the fact that there are not any international holidays during the months and the weather is hot and unpredictable during those months.
+May and June generated the least total revenue. This is likely due to the fact that there are not any international holidays during the months and the weather is hot and unpredictable during those months.
 
 ### 2. Number of tourists
 
 **By provinces**
+
+![Screen Shot 2024-01-31 at 11 46 14 AM](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/2bfb2ccb-56e6-43f5-bbd8-1928d613d1c1)
 
 Bangkok is the most visited province from 2019 to 2023 followed by Chonburi which is a province of Pattaya city. Surprisingly, Kanchanaburi was the third most visited province.
 As this province does not make it to the top 10 for total revenue and 98% of all tourists were Thai, it might be worth looking into the reasoning behind this. There could be some events in that province that attracted Thai tourists or perhaps there are some hidden gems known among Thai people. Similarly, there are also a few provinces in the top 10 list with over 94% being Thai tourists with not much revenue generated such as Phetchaburi, Nakhon Ratchasima, Prachuap Khiri Khan and Rayong. 
@@ -601,6 +608,8 @@ Chiang Mai and Phuket also make it to the top 10 most visited provinces, this al
 
 **By regions**
 
+![Dashboard 10](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/f1c081dd-1297-4555-9f5f-9255bba2e22f)
+
 The central region is the most visited by all tourists as expected since Bangkok is located in this region. Surprisingly, the northeast region is the second most visited with 97% of the tourists being Thai, although this region has the least total revenue. 
 
 As Thai tourists significantly outnumbered foreign tourists, it makes sense that the rank most visited regions are hugely influenced by Thai tourists’ preferences and the result would be different than the rank of regions based on the total revenue where Thai tourists spend less money in general.
@@ -609,26 +618,36 @@ The northern regions are more popular among Thai tourists whereas foreign touris
 
 **By months**
 
+![Dashboard 9](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/89081003-f045-44e5-be67-5f764936a53c)
+
 When we look at the number of visitors per month, it is evident that the result is also in line with the total revenue of each month. People tend to travel more during holiday seasons ( October - Jan) with January being the most popular month and they travel less in May which is the hottest month in Thailand and June which is during the rainy season.
 
 ### 3. Occupancy rate and total hotel reooms occupied
 
 **By provinces**
 
+![Dashboard 11](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/4bea796d-e9bc-44bd-990d-6ac0501958cf)
+
 Bangkok has the highest number of hotel rooms occupied followed by Chonburi, Phuket and Chiang Mai which is in accordance with the fact these provinces also have high total revenue. Tourists also tend to stay in the provinces that they visit but do not spend much money in such as Nakhon Ratchasima, Prachuap Khiri Khan, Phetchaburi and Kanchanaburi. 
+
+![Dashboard 11 (1)](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/5429bd4d-7418-4639-85c7-be637ad75f76)
 
 In terms of occupancy rate, Nan has the highest rate at 52% followed by Chiang Mai, Phetchhaburi and Kanchanaburi. These provinces are quite far from Bangkok with the Nan Chiang Mai situation in a different region, this may be one of the reasons why the occupancy rate is high. Some provinces also have less accommodation than the bigger provinces causing the occupancy rate to be higher even though the number of the occupied rooms are so much less.
 
 **By months**
 
+![Dashboard 12](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/87f0bd3e-60c3-453e-8c1d-a82487ab298a)
+
 Hotel rooms were the most occupied in January  and highly occupied during September to December. April to June was the least occupied period. This finding is in line with what we discovered for total revenue and total tourists.
 
 **By region**
 
+![Dashboard 13](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/de8197fd-1d62-4838-b23e-bb0139a3e1e0)
+
 The central region has the highest number of occupied hotel rooms, followed by the south, east, north and northeast. This is in line with the earlier finding regarding the ranking of the most visited regions and total revenue across all years.
 
 ### Recommendations
-1. Continue to elevate the tourism supply and sustainable standards for popular provinces like Bangkok, Chonburi and Chiang Mai.
-2. Considering a campaign or advertisement of provinces that are popular among Thai tourists to be more appealing towards foreigners as they tend to spend more money when travel in Thailand. Usually, the provinces with high number of Thai tourists do not generate that much revenue so try to make sure that there are fun activities or interesting things to do there.
-3. Continue to ensure that Thailand has the capacity to handle high volumes of tourists during popular months (October to February).
+1. The Ministry of Tourism and Sports should continue to elevate the tourism supply and sustainable standards for popular provinces such as Bangkok, Chonburi and Chiang Mai.
+2. The Ministry should also consider a campaign or advertisement of provinces that are only popular among Thai tourists to be more appealing towards foreigners as foreign tourists tend to spend more money while traveling in Thailand. The provinces with high number of Thai tourists seems to not generate that much revenue so it is important to make sure that there are fun activities or interesting things to do in those provinces.
+3. The Ministry shouls continue to ensure that Thailand has the capacity to handle high volumes of tourists during popular months (October to February).
  
