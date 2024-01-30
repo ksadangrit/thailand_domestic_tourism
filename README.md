@@ -261,7 +261,7 @@ GROUP BY
 ORDER BY
 	sum_revenue_foreign DESC;  
 ```
-# Rank the months
+#### Rank the months
 Now I will rank the months based on the total revenue to see if there are any trends throughout a year
 ```
 SELECT
@@ -346,4 +346,191 @@ ORDER BY
 	total_num DESC LIMIT 10;  
 ```
 
-For Thai
+**For Thai tourists**
+```
+SELECT
+	province,
+	region,
+	SUM(num_tourist_thai) AS total_num_thai,
+	SUM(num_tourist_all) AS total_num
+FROM
+	thailand_domestic_tourism
+GROUP BY
+	province,
+	region 
+ORDER BY 
+	total_num_thai DESC LIMIT 10;
+```
+
+**For foreign tourists**
+```
+SELECT
+	province,
+	region,
+	SUM(num_tourist_foreign) AS total_num_foreign,
+	SUM(num_tourist_all) AS total_num
+FROM
+	thailand_domestic_tourism
+GROUP BY
+	province,
+	region 
+ORDER BY 
+	total_num_foreign DESC LIMIT 10;    
+```
+
+#### Rank the regions
+#### Rank all regions based on number of all tourists
+```
+SELECT
+	region,
+	SUM(num_tourist_foreign) AS total_num_foreign,
+	SUM(num_tourist_thai) AS total_num_thai,
+	SUM(num_tourist_all) AS total_num,
+	CONCAT(ROUND(SUM(num_tourist_foreign) / SUM(num_tourist_all) * 100), '%') AS foreigner_percentage,
+	CONCAT(ROUND(SUM(num_tourist_thai) / SUM(num_tourist_all) * 100), '%') AS thai_percentage
+FROM
+	thailand_domestic_tourism
+GROUP BY
+	region 
+ORDER BY 
+	total_num DESC;
+```
+
+**For Thai tourists**
+```
+SELECT
+	region,
+	SUM(num_tourist_thai) AS total_num_thai,
+	SUM(num_tourist_all) AS total_num
+FROM 
+	thailand_domestic_tourism
+GROUP BY
+	region
+ORDER BY
+	total_num_thai DESC; 
+```
+
+**For foreign tourists**
+```
+SELECT
+	region,
+	SUM(num_tourist_foreign) AS total_num_foreign,
+	SUM(num_tourist_all) AS total_num
+FROM 
+	thailand_domestic_tourism
+GROUP BY
+	region
+ORDER BY
+	total_num_foreign DESC;  
+```
+
+#### Rank months by number of tourists
+**All tourists**
+```
+SELECT
+	MONTHNAME(date) AS month,
+	SUM(num_tourist_foreign) AS total_num_foreign,
+	SUM(num_tourist_thai) AS total_num_thai,
+	SUM(num_tourist_all) AS total_num,
+	CONCAT(ROUND(SUM(num_tourist_foreign) / SUM(num_tourist_all) * 100), '%') AS foreigner_percentage,
+	CONCAT(ROUND(SUM(num_tourist_thai) / SUM(num_tourist_all) * 100), '%') AS thai_percentage
+FROM
+	thailand_domestic_tourism
+GROUP BY
+	month
+ORDER BY 
+	total_num DESC;
+```
+
+**For Thai tourists**
+```
+/* Thai: Rank months by total number of Thai tourist */
+SELECT
+	MONTHNAME(date) AS month,
+	SUM(num_tourist_thai) AS total_num_thai,
+	SUM(num_tourist_all) AS total_num
+FROM
+	thailand_domestic_tourism
+GROUP BY
+	month
+ORDER BY 
+	total_num_thai DESC;
+```
+
+**For foreign tourists**
+```
+/* Foreign: Rank months by total number of Foreign tourist */
+SELECT
+	MONTHNAME(date) AS month,
+	SUM(num_tourist_foreign) AS total_num_foreign,
+	SUM(num_tourist_all) AS total_num
+FROM
+	thailand_domestic_tourism
+GROUP BY
+	month
+ORDER BY
+	total_num_foreign DESC;  
+```
+
+### Number of occupied hotel rooms and occupancy rate
+As the data for hotel rooms and occupancy rate are recorded from all tourists and are not sepearated by different tourist types, I will look at the over all picture based on year, month, region and provinces only. I will also include the occupancy rate for all the below analysis to see if there is any correlation between the two variables.
+
+#### Rank years based on total number of occupied rooms
+```
+SELECT
+	YEAR(date) AS year,
+	ROUND(SUM(num_occupied_room)) AS total_occupied_room,
+	CONCAT(ROUND(AVG(occupancy_rate)), '%') AS avg_occupancy_rate
+FROM
+	thailand_domestic_tourism
+GROUP BY
+	year
+ORDER BY
+	total_occupied_room DESC; 
+```
+
+#### Rank months by total number of occupied rooms
+```
+SELECT
+	MONTHNAME(date) AS month,
+	ROUND(SUM(num_occupied_room)) AS total_occupied_room,
+	CONCAT(ROUND(AVG(occupancy_rate)), '%') AS avg_occupancy_rate
+FROM
+	thailand_domestic_tourism
+GROUP BY
+	month
+ORDER BY
+	total_occupied_room DESC;   
+```
+
+#### Top 10 provinces by total number of occupied rooms
+```
+SELECT
+	province,
+	SUM(num_occupied_room) AS total_occupied_room,
+  	CONCAT(ROUND(AVG(occupancy_rate)), '%') AS avg_occupancy_rate
+FROM
+	thailand_domestic_tourism
+GROUP BY
+	province
+ORDER BY
+	total_occupied_room DESC LIMIT 10;
+```
+
+#### Rank regions by total number of occupied rooms
+```
+SELECT
+	region,
+	SUM(num_occupied_room) AS total_occupied_room,
+  	CONCAT(ROUND(AVG(occupancy_rate)), '%') AS avg_occupancy_rate
+FROM
+	thailand_domestic_tourism
+GROUP BY
+	region 
+ORDER BY
+	total_occupied_room DESC;
+```
+
+## Visualise my findings and provide insights and recommendations.
+
+
