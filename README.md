@@ -1,6 +1,7 @@
 # Thailand Domestic Tourism 2019 to 2023
 
 ![pexels-pixabay-460376](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/cb792545-d03a-48e2-87d9-7bdd27921f08)
+Photo by Pixabay from [Pexels](https://www.pexels.com/photo/gray-pointed-concrete-structure-460376/)
 
 ## Introduction
 This is a data analysis on Thailand Domestic Tourism using a dataset from **January 2019 to February 2023**. I chose to explore this data as I had recently traveled back to Thailand and were also there right before the Covid lockdown. I am curious to see the changes in Thai domestic tourism from prior to Covid outbreak to post Covid outbreak. There are four aspects in this data that will be analysed for trends and insights including total revenue, number of tourists, number of occupied hotel rooms and occupancy rate. The insights and recommendations will be based on the results of my analysis combined with my general knowledge as a Thai person.
@@ -550,6 +551,8 @@ ORDER BY
 
 ## Findings and recommendations
 For this part of the project, I use **Tableau** as a tool for visualising my findings. I create a dynamic dashboard includings 4 pages: overview, total revenue, number of tourists and total occupied hotel rooms. I include important findings next to the visulisation for each section to summarise any interesting trends or discovery. 
+
+To view the full dashboard, please click [here](https://public.tableau.com/views/ThailandDomesticTravel/Dashboard1?:language=en-GB&:display_count=n&:origin=viz_share_link).
 
 ## Overall Findings
 
