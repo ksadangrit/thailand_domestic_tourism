@@ -503,7 +503,7 @@ ORDER BY
 	total_occupied_room DESC;   
 ```
 
-#### Top 10 provinces by total number of occupied rooms
+#### Top 10 provinces by total number of occupied rooms 
 ```
 SELECT
 	province,
@@ -515,6 +515,20 @@ GROUP BY
 	province
 ORDER BY
 	total_occupied_room DESC LIMIT 10;
+```
+
+#### Top 10 provinces ranked by occupancy rate 
+As there are 77 provinces, it will be difficult to understand whether the correlation between occopancy rate and the total number of occupied rooms without ranking provinces by occupancy rate. As a result, I am also ranking top 10 provinces by occupancy rate.
+```
+SELECT
+	province,
+	CONCAT(ROUND(AVG(occupancy_rate)), '%') AS avg_occupancy_rate
+FROM
+	thailand_domestic_tourism
+GROUP BY
+	province
+ORDER BY
+	avg_occupancy_rate DESC LIMIT 10;  
 ```
 
 #### Rank regions by total number of occupied rooms
@@ -532,5 +546,80 @@ ORDER BY
 ```
 
 ## Visualise my findings and provide insights and recommendations.
+For this part of the project, I use **Tableau** as a tool for visualising my findings. I create a dynamic dashboard includings 4 pages: overview, total revenue, number of tourists and total occupied hotel rooms. I include important findings next to the visulisation for each section to summarise any interesting trends or discovery. Please click [here](https://public.tableau.com/app/profile/kantima.sadangrit/viz/ThailandDomesticTravel/Dashboard1) to view the dashboard. 
 
+## Overall Findings and recommendations
 
+### Total revenue vs number of tourists
+
+![image](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/48444482-eb88-4ffa-8d80-20293750c154)
+
+51% of the total revenue accumulated from all year is from foreign tourists while 49% is from Thai tourists. This may not seem like a big difference but when we look at the number of tourists, 84% of all tourists are Thai while 16% are foreigners. This shows that Thai tourists tend to spend much less than foreign tourists while they travel domestically in Thailand.
+
+### Total revenue vs number of tourists vs occupied hotel rooms by year
+
+When comparing the years based on total revenue, total number of tourists and total number of hotel rooms occupied, we can see that 2019 comes in first for all categories, followed by 2022 and 2020. This is highly because 2019 was the year before covid outbreak and 2022 was when border restrictions and healthcare measurement were eased in Thailand. 
+
+Although 2020 was the year that covid started spreading in Thailand, the country was not fully shut down until the second half of the year and that could be why the total revenue and number of tourist and hotel rooms occupied are more than 2021. As we do not have the full-year data for 2023, it makes sense that this year ranks last or the second last for all three categories.
+
+### 1. Total revenue
+**By provinces**
+
+Bangkok ranks first as the province with the highest total revenue across all years, followed by Phuket, Chonburi, Chiang Mai and Krabi. For Thai tourists, Chiang mai ranks second in terms of total revenue while for foreign tourists, Chiang mai does not make it into their top 5. 
+
+Besides Bangkok, the foreign tourist’s top 5 consists of the provinces that are famous for beaches and islands such as Phuket, Chonburi(Pattaya is part of this province), Surat Thani and Krabi. Half of the provinces that made it to the Thai tourists’ top 10 have no beaches at all.
+
+It is worth noting that foreign tourists spend over 7 times more money in Phuket than Thai tourists while Thai tourists spend almost 3 times more money than foreign tourists in Chiang Mai. Thai tourists also tend to spend at least 5 times more in the provinces that are in the last top 10 including Prachuap Khiri Khan, Chiang Rai and Phetchaburi.
+
+**By regions**
+
+The central region ranks first based on the total revenue generated, followed by South, East, North and Northeast regions. Bangkok is likely to play a big part in the result as Bangkok is the number one province with the most total revenue from all tourist types and it is located in the central part of Thailand. 
+
+The southern region and the eastern region rank second and third respectively for the total revenue as foreign tourists tend to spend more money on their trip and provinces with beaches in the southern and eastern regions are popular among foreign tourists. 
+
+In contrast, the northern region rank which is in line with how Chiang Mai is also the province where Thai tourists spend most money in.
+
+**By months**
+
+Thailand accumulated its tourism revenue the most in January, February, December, November and October respectively. This is highly because the end of the year and the beginning of the year are during international holiday seasons, therefore, people travel and spend money more during these times.  
+
+June and May are at the bottom of the list. This is likely due to the fact that there are not any international holidays during the months and the weather is hot and unpredictable during those months.
+
+### 2. Number of tourists
+
+**By provinces**
+
+Bangkok is the most visited province from 2019 to 2023 followed by Chonburi which is a province of Pattaya city. Surprisingly, Kanchanaburi was the third most visited province.
+As this province does not make it to the top 10 for total revenue and 98% of all tourists were Thai, it might be worth looking into the reasoning behind this. There could be some events in that province that attracted Thai tourists or perhaps there are some hidden gems known among Thai people. Similarly, there are also a few provinces in the top 10 list with over 94% being Thai tourists with not much revenue generated such as Phetchaburi, Nakhon Ratchasima, Prachuap Khiri Khan and Rayong. 
+
+Phra Nakhon Si Ayutthaya is also a similar case as 88% of all tourists visited are Thai but this province is not one of the top 10 provinces with the most total revenue. These provinces are also worth looking at and exploring further.
+
+Chiang Mai and Phuket also make it to the top 10 most visited provinces, this aligns with the facts that they are also in the top 10 provinces that tourists spend most money in.
+
+**By regions**
+
+The central region is the most visited by all tourists as expected since Bangkok is located in this region. Surprisingly, the northeast region is the second most visited with 97% of the tourists being Thai, although this region has the least total revenue. 
+
+As Thai tourists significantly outnumbered foreign tourists, it makes sense that the rank most visited regions are hugely influenced by Thai tourists’ preferences and the result would be different than the rank of regions based on the total revenue where Thai tourists spend less money in general.
+
+The northern regions are more popular among Thai tourists whereas foreign tourists prefer to visit the southern region more. The northeastern regions are also the least popular regions for foreign tourists.
+
+**By months**
+
+When we look at the number of visitors per month, it is evident that the result is also in line with the total revenue of each month. People tend to travel more during holiday seasons ( October - Jan) with January being the most popular month and they travel less in May which is the hottest month in Thailand and June which is during the rainy season.
+
+### 3. Occupancy rate and total hotel reooms occupied
+
+**By provinces**
+
+Bangkok has the highest number of hotel rooms occupied followed by Chonburi, Phuket and Chiang Mai which is in accordance with the fact these provinces also have high total revenue. Tourists also tend to stay in the provinces that they visit but do not spend much money in such as Nakhon Ratchasima, Prachuap Khiri Khan, Phetchaburi and Kanchanaburi. 
+
+In terms of occupancy rate, Nan has the highest rate at 52% followed by Chiang Mai, Phetchhaburi and Kanchanaburi. These provinces are quite far from Bangkok with the Nan Chiang Mai situation in a different region, this may be one of the reasons why the occupancy rate is high. Some provinces also have less accommodation than the bigger provinces causing the occupancy rate to be higher even though the number of the occupied rooms are so much less.
+
+**By months**
+
+Hotel rooms were the most occupied in January  and highly occupied during September to December. April to June was the least occupied period. This finding is in line with what we discovered for total revenue and total tourists.
+
+**By region**
+
+The central region has the highest number of occupied hotel rooms, followed by the south, east, north and northeast. This is in line with the earlier finding regarding the ranking of the most visited regions and total revenue across all years.
