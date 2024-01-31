@@ -192,7 +192,7 @@ LIMIT 10;
 #### Rank the provinces
 Now I will look at top 10 provinces based on the total revenue generated from each type of tourist to find out in which provinces the different types of tourists spent their money in the most and whether there is any correlation between the different types of tourists.
 
-**Thai Tourists** 
+**Thai tourists** 
 ```
 /* For Thai: Rank top 10 provinces with the most total revenue from Thai tourists */ 
 SELECT
@@ -573,7 +573,7 @@ When comparing the years based on total revenue, total number of tourists and to
 Although 2020 was the year that covid started spreading in Thailand, the country was not fully shut down until the second half of the year and that could be why the total revenue and number of tourist and hotel rooms occupied are more than 2021. As we do not have the full-year data for 2023, it makes sense that this year ranks last or the second last for all three categories.
 
 ### 1. Total revenue
-**By provinces**
+**By province**
 
 ![Dashboard 6 (1)](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/65db2094-eb4a-4f73-9c92-af10caf9f652)
 
@@ -583,7 +583,7 @@ Besides Bangkok, the foreign tourist’s top 5 consists of the provinces that ar
 
 It is worth noting that foreign tourists spend over 7 times more money in Phuket than Thai tourists while Thai tourists spend almost 3 times more money than foreign tourists in Chiang Mai. Thai tourists also tend to spend at least 5 times more in the provinces that are in the last top 10 including Prachuap Khiri Khan, Chiang Rai and Phetchaburi.
 
-**By regions**
+**By region**
 
 ![Dashboard 7](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/6155be3c-29d0-4d51-8909-05a9edf2e8e1)
 
@@ -593,7 +593,7 @@ The southern region and the eastern region rank second and third respectively fo
 
 In contrast, the northern region rank which is in line with how Chiang Mai is also the province where Thai tourists spend most money in.
 
-**By months**
+**By month**
 
 ![Dashboard 8 (1)](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/3c70a8af-aac3-4284-9d5f-0b7e199428e1)
 
@@ -603,7 +603,7 @@ May and June generated the least total revenue. This is likely due to the fact t
 
 ### 2. Number of tourists
 
-**By provinces**
+**By province**
 
 ![Screen Shot 2024-01-31 at 11 46 14 AM](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/2bfb2ccb-56e6-43f5-bbd8-1928d613d1c1)
 
@@ -614,7 +614,7 @@ Phra Nakhon Si Ayutthaya is also a similar case as 88% of all tourists visited a
 
 Chiang Mai and Phuket also make it to the top 10 most visited provinces, this aligns with the fact that they are also in the top 10 provinces that tourists spend most money in.
 
-**By regions**
+**By region**
 
 ![Dashboard 10](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/f1c081dd-1297-4555-9f5f-9255bba2e22f)
 
@@ -624,7 +624,7 @@ As Thai tourists significantly outnumbered foreign tourists, it makes sense that
 
 The northern regions are more popular among Thai tourists whereas foreign tourists prefer to visit the southern region more. The northeastern regions are also the least popular regions for foreign tourists.
 
-**By months**
+**By month**
 
 ![Dashboard 9](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/89081003-f045-44e5-be67-5f764936a53c)
 
@@ -632,7 +632,7 @@ When we look at the number of visitors per month, it is evident that the result 
 
 ### 3. Occupancy rate and total hotel reooms occupied
 
-**By provinces**
+**By province**
 
 ![Dashboard 11](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/4bea796d-e9bc-44bd-990d-6ac0501958cf)
 
@@ -642,7 +642,7 @@ Bangkok has the highest number of hotel rooms occupied followed by Chonburi, Phu
 
 In terms of occupancy rates, Nan has the highest rate at 52% followed by Chiang Mai, Phetchhaburi and Kanchanaburi. These provinces are quite far from Bangkok with the Nan Chiang Mai situation in a different region, this may be one of the reasons why the occupancy rate is high. Some provinces also have less accommodation than the bigger provinces causing the occupancy rate to be higher even though the number of the occupied rooms are so much less.
 
-**By months**
+**By month**
 
 ![Dashboard 12](https://github.com/ksadangrit/thailand_domestic_tourism/assets/156267785/87f0bd3e-60c3-453e-8c1d-a82487ab298a)
 
