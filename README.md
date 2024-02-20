@@ -12,7 +12,7 @@ _**Note:** Since the dataset only contains 2 months for the year 2023, the resul
 1. Import and prepare data
 2. Process and clean my data
 3. Calculate and analyse my data
-4. Finding and recommendations
+4. Findings and recommendations
 
 ## Import and prepare data
 First, I will download this [dataset](https://www.kaggle.com/datasets/thaweewatboy/thailand-domestic-tourism-statistics) from Kaggle and import it into MySQL to view the dataset. This dataset was sourced from raw data provided by the [Official Ministry of Tourism and Sports Statistics](http://www.mots.go.th/news/category/411). This dataset is from January 2019 to February 2023. 
